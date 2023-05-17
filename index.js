@@ -139,6 +139,10 @@ app.use(session(sessionConfig));
     res.render('signin', { showSignInButton: true });
 });
 
+app.get('/terms_condtions', (req, res) => {
+    res.render('terms', { showSignInButton: true});
+})
+
 app.get('/signin',(req, res)=>{
         //Initiate a Auth Code Flow >> for sign in
         //no scopes passed. openid, profile and offline_access will be used by default.
